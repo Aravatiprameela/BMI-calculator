@@ -22,18 +22,18 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/bmi/calculate",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            weight: Number(weight),
-            height: Number(height),
-          }),
-        }
-      );
+  "https://bmi-calculator-nmn5.onrender.com/api/bmi/calculate",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      weight: Number(weight),
+      height: Number(height),
+    }),
+  }
+);
 
       const data = await response.json();
 
